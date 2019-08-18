@@ -30,5 +30,5 @@ export default class FormContainer extends Component {
   }
 }
 
-const wrapper = document.getElementById("appdiv");
-wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
+// const wrapper = document.getElementById("appdiv");
+// wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
