@@ -11,10 +11,10 @@ export default connect(
   })
 )
   (
-    class HomeComponent extends React.Component {
+    class WeatherComponent extends React.Component {
 
       public render() {
-        return <div>HomeComponent</div>;
+        return <div>WeatherComponent</div>;
       }
 
     }
