@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch, withRouter } from "react-router-dom";
 import HomeComponent from "./components/container/HomeComponent";
 import NavigationComponent from "./components/container/NavigationComponent";
 import WeatherComponent from "./components/container/WeatherComponent";
@@ -13,7 +13,7 @@ class App extends React.Component {
 
   public render() {
     return <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
 
         <header>
           <NavigationComponent />
@@ -21,12 +21,12 @@ class App extends React.Component {
 
         <main>
           <Switch>
-            <Route path="/" exact component={HomeComponent}></Route>
+            <Route path="/" exact component={withRouter(HomeComponent)}></Route>
             <Route path="/weather" exact component={WeatherComponent}></Route>
           </Switch>
         </main>
 
-      </BrowserRouter>
+      </HashRouter>
     </Provider>;
   }
 
