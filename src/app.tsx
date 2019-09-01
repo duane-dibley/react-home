@@ -1,12 +1,16 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import HomeComponent from './components/HomeComponent';
-import NavigationComponent from './components/NavigationComponent';
+import { Provider } from 'react-redux'
+import configureStore from './store/configureStore';
+import HomeComponent from './components/container/HomeComponent';
+import NavigationComponent from './components/container/NavigationComponent';
+
+const store = configureStore();
 
 ReactDOM.render(
-  <div>
+  <Provider store={store}>
     <NavigationComponent />
     <HomeComponent />
-  </div>,
+  </Provider>,
   document.getElementById("appdiv")
 );
