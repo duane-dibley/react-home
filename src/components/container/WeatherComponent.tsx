@@ -12,10 +12,10 @@ export default connect(
   })
 )
   (
-    class WeatherComponent extends React.Component {
+    class WeatherComponent extends React.Component<any> {
 
       public render() {
-        return <Form>
+        return <Form onSubmit={this.props.dataActions.fetchData}>
           <Form.Group controlId="param">
             <Form.Label>Param</Form.Label>
             <Form.Control type="input" placeholder="Param placeholder" />
@@ -34,6 +34,10 @@ export default connect(
           </Button>
         </Form>;
       }
+
+      // private onSubmitForm() {
+      //   console.log("WeatherComponent onSubmitForm");
+      // }
 
     }
   );

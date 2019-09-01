@@ -5,11 +5,11 @@ export default function data(state = { rows: [] }, action) {
   switch (action.type) {
 
     case FETCH_DATA:
-      console.log("FETCH_DATA Action");
+      console.log("FETCH_DATA dataReducer");
       return state;
 
     case RECEIVE_DATA:
-      console.log("RECEIVE_DATA Action");
+      console.log("RECEIVE_DATA dataReducer");
       return state;
 
     default:
