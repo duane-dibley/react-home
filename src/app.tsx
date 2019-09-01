@@ -7,6 +7,8 @@ import NavigationComponent from "./components/container/NavigationComponent";
 import WeatherComponent from "./components/container/WeatherComponent";
 import configureStore from "./store/configureStore";
 
+import "./app.scss";
+
 const store = configureStore();
 
 class App extends React.Component {

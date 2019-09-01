@@ -1,8 +1,18 @@
+const autoprefixer = require('autoprefixer');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   entry: ["./src/app.tsx"],
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader"
+          }
+        ]
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -11,10 +21,31 @@ module.exports = {
         }
       },
       {
-        test: /\.html$/,
+        test: /\.scss$/,
         use: [
           {
-            loader: "html-loader"
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              plugins() {
+                return [autoprefixer("last 2 version")];
+              }
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
           }
         ]
       },
@@ -32,6 +63,6 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: [".tsx", ".ts", ".js"]
   },
 };

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { connect } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { bindActionCreators, Dispatch } from "redux";
 import * as dataActions from "../../actions/dataActions";
 import { IState } from "../../interface";
@@ -18,8 +18,8 @@ export default connect(
       public render() {
         return <Navbar>
           <Nav>
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/weather">Weather</Nav.Link>
+            <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+            <Nav.Link as={NavLink} to="/weather">Weather</Nav.Link>
           </Nav>
         </Navbar>;
       }
