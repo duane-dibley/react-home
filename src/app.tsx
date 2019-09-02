@@ -1,3 +1,4 @@
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -35,6 +36,8 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-  <App />,
+  <MuiThemeProvider>
+    <App />
+  </MuiThemeProvider>,
   document.getElementById("appdiv")
 );
