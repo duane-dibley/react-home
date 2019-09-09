@@ -1,14 +1,11 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import { bindActionCreators, Dispatch } from "redux";
-import * as dataActions from "../../actions/dataActions";
+import { Dispatch } from "redux";
 import { IState } from "../../interface";
 
 export default connect(
   (state: IState) => ({}),
-  (dispatch: Dispatch) => ({
-    dataActions: bindActionCreators(dataActions, dispatch)
-  })
+  (dispatch: Dispatch) => ({})
 )
   (
     class HomeComponent extends React.Component {

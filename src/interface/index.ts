@@ -1,7 +1,7 @@
-export interface IData {
+export interface IWeather {
   rows: any[];
 }
 
 export interface IState {
-  data: IData;
+  weather: IWeather;
 }

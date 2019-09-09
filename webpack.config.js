@@ -2,7 +2,7 @@ const autoprefixer = require('autoprefixer');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: ["./src/app.tsx"],
+  // entry: ["./src/app.tsx"],
   module: {
     rules: [
       {

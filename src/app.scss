@@ -1,10 +1,12 @@
 body {
+  margin: 0;
 
   header {
 
     a {
       color: inherit;
       padding: 5px;
+      text-decoration: none;
 
       &:hover {
         color: inherit;
